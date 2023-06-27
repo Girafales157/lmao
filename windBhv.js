@@ -1,19 +1,27 @@
 window.onload = function(){
     let btnA = document.getElementById("si"),
     btnB = document.getElementById("su"),
+    rtsi = document.getElementById("rtsi"),
+    rtsu = document.getElementById("rtsu"),
     qsA = document.querySelector("div.SignInWindow"),
     qsB = document.querySelector("div.SignUpWindow")
-        
-
-    btnA.addEventListener("click", function(){
-        // console.log("listener de evento pegando fi")
-        qsA.style.display = "block"
-        qsB.style.display = "none"
-    })
       
-    btnB.addEventListener("click", function(){
-        // console.log("nesse tbm tu eh doido")
-        qsA.style.display = "none"
-        qsB.style.display = "block"
-    })
+    const changeLog = pararg => {
+        switch(pararg){
+            case 1:
+                qsA.style.display = "block"
+                qsB.style.display = "none"
+                break
+            case 2:
+                qsA.style.display = "none"
+                qsB.style.display = "block"
+                break
+        }
+    }
+
+    rtsi.onclick = btnA.addEventListener("click", changeLog(1))
+    btnB.addEventListener("click", changeLog(2))
+
+    // rtsi.onclick = changeLog()
+    // rtsu.onclick = changeLog()
 }

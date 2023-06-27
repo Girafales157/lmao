@@ -1,8 +1,8 @@
 window.onload = function(){
-    let btnA = document.getElementById("si")
-    let btnB = document.getElementById("su")
-    let qsA = document.querySelector("div.SignInWindow")
-    let qsB = document.querySelector("div.SignUpWindow")
+    let btnA = document.getElementById("si"),
+    btnB = document.getElementById("su"),
+    qsA = document.querySelector("div.SignInWindow"),
+    qsB = document.querySelector("div.SignUpWindow")
         
 
     btnA.addEventListener("click", function(){

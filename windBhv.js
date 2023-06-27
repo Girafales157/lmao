@@ -25,3 +25,5 @@ window.onload = function(){
     rtsi.onclick = changeLog(1)
     rtsu.onclick = changeLog(2)
 }
+
+//mim caguei

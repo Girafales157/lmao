@@ -19,9 +19,9 @@ window.onload = function(){
         }
     }
 
-    rtsi.onclick = btnA.addEventListener("click", changeLog(1))
+    btnA.addEventListener("click", changeLog(1))
     btnB.addEventListener("click", changeLog(2))
 
-    // rtsi.onclick = changeLog()
-    // rtsu.onclick = changeLog()
+    rtsi.onclick = changeLog(1)
+    rtsu.onclick = changeLog(2)
 }

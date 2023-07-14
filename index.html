@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!--A FAZER():
+ - Estabelecer ligação com Banco de Dados;
+ - Criar a interface de usuário;
+ - Criar a interface de adm;
+ - Registrar produto e informações;
+ - pensar dps;
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="lmao.css">
     <script src="./windBhv.js"></script>
 
-    <title>Lmao</title>
+    <title>projeto teles</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <button type="button" id="si">Entrar</button>
-    <button type="button" id="su">Cadastrar-se</button>
 
-    <div class="SignInWindow">
-        Nome de usuário ou e-mail
-        <br />
-        <input type="text" id="user"><br>
-        Senha
-        <br />
-        <input type="password" id="password"><br>
-        <button type="button">Entrar</button>
-        <br>
-        Não lembra de sua senha?
-        <br>
-        <a href="#" id="rtsu">Clique aqui</a>
-    </div>
+    <header class="header">
+        <img src="https://mercadinho-teles-online.000webhostapp.com/tmp/mtlogo.png" id="logo">
+    </header>
 
-    <div class="SignUpWindow">
-        Nome de usuário
-        <br />
-        <input type="text" id="username"><br>
-        E-mail
-        <br />
-        <input type="email" id="email"><br>
-        Senha
-        <br />
-        <input type="password" id="password"><br>
-        Confirmar senha
-        <br />
-        <input type="password" id="password"><br>
-        <button type="button">Cadastrar-se</button>
-        <br>
-        Já possui uma conta?
-        <br>
-        <a href="#" id="rtsi">Clique aqui</a>
-    </div>
-    
+    <section>
+        <i class='bx bx-arrow-back' ></i>
+
+        <div id="selector">
+            <button id="toMain">
+                <i class='bx bxs-store-alt'></i><br>
+                <h1>Ver estoque</h1>
+            </button>
+
+            <button id="toPf">
+                <i class='bx bx-user-circle'></i><br>
+                <h1>Acessar</h1>
+            </button>
+        </div>
+
+        <div class="user-ui">
+            <button type="button" id="si">Entrar</button>
+            <button type="button" id="su">Cadastrar-se</button>
+
+            <div class="SignInWindow">
+                <h1 id="h1si">Iniciar sessão:</h1>
+                Nome de usuário ou e-mail
+                <br />
+                <input type="text" id="user"><br>
+                Senha
+                <br />
+                <input type="password" id="password1">
+                <br>
+                <input type="checkbox" class="showPassword">Mostrar as senhas
+                <br>
+                <button type="button" id="btnSI">Entrar</button>
+            </div>
+
+            <div class="SignUpWindow"><!--cadastro-->
+                <h1 id="h1su">Criar conta:</h1>
+                Nome de usuário
+                <br />
+                <input type="text" id="username"><br>
+                E-mail
+                <br />
+                <input type="email" id="email"><br>
+                Senha
+                <br />
+                <input type="password" id="password2" minlength="8"><br>
+                Confirmar senha
+                <br />
+                <input type="password" id="verifPassword2" minlength="8">
+                <br>
+                <input type="checkbox" class="showPassword">Mostrar as senhas
+                <br>
+                <button type="button" id="btnSU">Cadastrar-se</button>
+            </div>
+        </div>
+
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.9746023983278!2d-60.00413697160841!3d-3.1215648606872026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c057d6775f1fb%3A0x453c6d329e3c15a9!2sMercadinho%20Teles!5e0!3m2!1sen!2sbr!4v1688139105090!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+    </section>
+
+    <footer class="footer">
+        <nav>
+            <strong>
+                <div class="output"></div>
+            </strong>
+            <a href="#" id="horario">00:00:00</a>
+            <a href="#" id="estado"> - Carregando...</a>
+            <a target="_blank" href="https://goo.gl/maps/9L8fHdDKnKeTvh1bA" id="location">Venha nos visitar! <i class='bx bx-map' ></i></a>
+        </nav>
+    </footer>
+
 </body>
 
 </html>

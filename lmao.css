@@ -9,10 +9,257 @@
     list-style: none;   
 }
 
-.SignInWindow{
+i.bx.bx-arrow-back{
+    position: fixed;
+    top: 14vh;
+    left: 1.5%;
     display: none;
+    width: fit-content;
+    font-size: 1.75rem;
+    padding: 1%;
+    color: #0d5dc7;
+    background-color: #ffffff;
+    border-width: 0;
+    border-radius: 2vh;
+    margin-bottom: 5%;
 }
 
-.SignUpWindow{
+i.bx.bx-arrow-back:hover{
+    color: white;
+    background-color: #0d5dc7;
+}
+
+button#toMain, button#toPf{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 25%;
+    padding: .5%;
+    color: white;
+    background-color: #0d5dc7;
+    border-width: 0;
+    border-radius: 2vh;
+}
+button#toMain, button#toPf{
+    position: relative;
+    top: 15vh;
+    margin-bottom: 1.5%;
+}
+
+button#toMain:hover, button#toPf:hover{
+    color: #0d5dc7;
+    background-color: white;
+}
+button#toMain i, button#toPf i{
+    font-size: 750%;
+    margin-right: 4%;
+}
+
+button#toMain h1, button#toPf h1{
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    font-size: 1.75rem;
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 12vh;
+    border-width: .4vh;
+    /* border-style: solid; */
+    /* border-color: white; */
+    /* border-bottom-color: rgb(0, 38, 141); */
+    z-index: 10;
+}
+
+#logo{
+    height: 100%;
+}
+
+.footer{
+    padding: 1%;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(223, 141, 0);
+    border-style: solid;
+    border-top-color: white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-width: .5vh;
+}
+.footer a{
+    /* display: flex; */
+    color: white;
+}
+.footer #location{
+    position: absolute;
+    right: 5%;
+}
+.footer #location:hover{
+    background-color: #ffffff;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 4%;
+    padding: 2%;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    /* font-style: italic; */
+}
+
+#si, #su, #btnSI, #btnSU{
+    padding: 5%;
+    color: white;
+    background-color: #0d5dc7;
+    width: 100%;
+    border-width: 0;
+    font-size: 1.25rem;
+    height: 7.5vh;
+    border-radius: 2vh;
+    margin-bottom: 5%;
+}
+
+#si:hover, #su:hover, #btnSI:hover, #btnSU:hover{
+    font-weight: bold;
+    border-width: .5vh;
+    border-color: #0d5dc7;
+    padding: 2%;
+    border-style: solid;
+    color: #0d5dc7;
+    background-color: white;
+}
+
+#btnSI, #btnSU{
+    margin-top: 6%;
+    margin-bottom: 0;
+}
+/* {
+    padding: 5%;
+    width: 100%;
+    height: 7.5vh;
+    border-radius: 2vh;
+    margin-bottom: 5%;
+} */
+.SignInWindow, .SignUpWindow{
     display: none;
+    margin-bottom: 7.5vh;
+}
+
+body{
+    background-color: darkgray;
+    width: 100%;
+}
+
+h1{
+    margin-bottom: 3%;
+}
+
+/*cor do header: #0E4C9F*/
+
+section{
+    position: relative;
+    top: 12vh;
+    height: 88vh;
+    bottom: 12vh;
+    /* margin-top: auto; */
+}
+
+
+
+.output{
+    display: block;
+    background-color: rgb(220, 20, 60);
+    color: white;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -105%;
+}
+
+.user-ui{
+    background-color: white;
+    display: none;
+    width: 45vh;
+    height: fit-content;
+    
+    padding: 2.5%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 12vh;
+    /* margin-bottom: 15vh; */
+
+    /* border-style: solid; */
+    border-radius: 5vh;
+    border-bottom-left-radius: 0vh;
+    border-bottom-right-radius: 0vh;
+    /* border-width: .4vh;
+    border-color: rgb(0, 38, 141); */
+}
+.user-ui input {
+    font-size: 1.1rem;
+    border-width: 0;
+    border-bottom-width: .30vh;
+    margin: 3%;
+    padding: 2%;
+    /* padding-bottom: 2%; */
+    width: 100%;
+}
+
+.user-ui input:focus-visible{
+    outline: none;
+}
+
+input[type="checkbox" i]{
+    width: initial;
+}
+
+@media screen and (max-width: 450px) {
+
+    #logo{
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .user-ui{
+        font-size: 1.5rem;
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .user-ui input{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+
+    #si, #su, #btnSU, #btnSI{
+        padding: 0;
+    }
+
+    input[type="checkbox" i]{
+        margin-right: 3%;
+    }
+
+
 }
